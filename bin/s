@@ -1,0 +1,75 @@
+# Lista de exercícios
+exercicios = [
+"Faça um programa que leia um número inteiro e o imprima.",
+"Faça um programa que leia um número real e o imprima.",
+"Peça ao usuário para digitar três valores inteiros e imprima a soma deles.",
+"Leia um número real e imprima o resultado do quadrado desse número.",
+"Leia um número real e imprima a quinta parte desse número.",
+"Leia uma temperatura em graus Celsius e apresente-a convertida em graus Fahrenheit. Fórmula: F = C × (9.0/5.0) + 32.0",
+"Leia uma temperatura em graus Fahrenheit e apresente-a convertida em graus Celsius. Fórmula: C = 5.0 × (F − 32.0) / 9.0",
+"Leia uma temperatura em graus Kelvin e apresente-a convertida em graus Celsius. Fórmula: C = K − 273.15",
+"Leia uma temperatura em graus Celsius e apresente-a convertida em graus Kelvin. Fórmula: K = C + 273.15",
+"Leia uma velocidade em km/h e apresente-a convertida em m/s. Fórmula: M = K / 3.6",
+"Leia uma velocidade em m/s e apresente-a convertida em km/h. Fórmula: K = M × 3.6",
+"Leia uma distância em milhas e apresente-a convertida em quilômetros. Fórmula: K = 1.61 × M",
+"Leia uma distância em quilômetros e apresente-a convertida em milhas. Fórmula: M = K / 1.61",
+"Leia um ângulo em graus e apresente-o convertido em radianos. Fórmula: R = G × π / 180 (π = 3.14)",
+"Leia um ângulo em radianos e apresente-o convertido em graus. Fórmula: G = R × 180 / π (π = 3.14)",
+"Leia um valor de comprimento em polegadas e apresente-o convertido em centímetros. Fórmula: C = P × 2.54",
+"Leia um valor de comprimento em centímetros e apresente-o convertido em polegadas. Fórmula: P = C / 2.54",
+"Leia um volume em metros cúbicos (m³) e converta para litros. Fórmula: L = 1000 × M",
+"Leia um volume em litros e converta para metros cúbicos. Fórmula: M = L / 1000",
+"Leia uma massa em quilogramas e converta para libras. Fórmula: L = K / 0.45",
+"Leia uma massa em libras e converta para quilogramas. Fórmula: K = L × 0.45",
+"Leia um comprimento em jardas e converta para metros. Fórmula: M = 0.91 × J",
+"Leia um comprimento em metros e converta para jardas. Fórmula: J = M / 0.91",
+"Leia uma área em metros quadrados e converta para acres. Fórmula: A = M × 0.000247",
+"Leia uma área em acres e converta para metros quadrados. Fórmula: M = A × 4048.58",
+"Leia uma área em metros quadrados e converta para hectares. Fórmula: H = M × 0.0001",
+"Leia uma área em hectares e converta para metros quadrados. Fórmula: M = H × 10000",
+"Leia três valores e apresente a soma dos quadrados deles.",
+"Leia quatro notas, calcule a média aritmética e imprima o resultado.",
+"Leia um valor em reais e a cotação do dólar. Imprima o valor em dólares.",
+"Leia um número inteiro e imprima seu antecessor e sucessor.",
+"Leia um número inteiro e imprima a soma do sucessor do triplo com o antecessor do dobro.",
+"Leia o lado de um quadrado e calcule sua área.",
+"Leia o raio de um círculo e calcule sua área. Fórmula: A = π × r² (π = 3.141592)",
+"Leia os catetos (a e b) de um triângulo e calcule a hipotenusa. Fórmula: h = √(a² + b²)",
+"Leia altura e raio de um cilindro e calcule seu volume. Fórmula: V = π × r² × h",
+"Leia o valor de um produto e aplique 12% de desconto.",
+"Leia o salário e calcule o novo salário com aumento de 25%.",
+"Divida R$ 780.000,00 entre três ganhadores: 1º: 46%, 2º: 32%, 3º: restante",
+"Um encanador recebe R$ 30,00/dia. Calcule o salário líquido com desconto de 8%.",
+"Leia valor da hora e horas trabalhadas. Adicione 10% ao salário final.",
+"Leia o salário-base. Gratificação: +5%, Imposto: −7%",
+"Para vendas: À vista: 10% de desconto, Parcelado (3x): sem juros, Comissão à vista: 5% sobre valor com desconto, Comissão parcelada: 5% sobre valor total",
+"Calcule quantos degraus são necessários para atingir uma altura desejada.",
+"Converta uma letra maiúscula para minúscula usando ASCII.",
+"Leia um número de 3 dígitos e imprima-o invertido.",
+"Leia um número de 4 dígitos e imprima um dígito por linha.",
+"Converta segundos em horas, minutos e segundos.",
+"Calcule o horário final de um experimento (hora inicial + duração em segundos).",
+"Calcule o ano de nascimento com base na idade e no ano atual.",
+"Leia coordenadas (x, y) e calcule a distância até (0, 0). Fórmula: d = √(x² + y²)",
+"Divida um prêmio proporcionalmente ao valor apostado por três amigos.",
+"Calcule o custo para cercar um terreno: custo = 2 × (c + l) × p"
+]
+
+# Criando arquivos
+for i, exercicio in enumerate(exercicios, start=1):
+    romano = para_romano(i)
+    numero_formatado = f"{i:02d}"
+    
+    nome_arquivo = f"lista{numero_formatado}.java"
+    
+    with open(nome_arquivo, "w", encoding="utf-8") as f:
+        f.write(f"// Exercício {numero_formatado} ({romano})\n")
+        f.write(f"// {exercicio}\n\n")
+        
+        f.write(f"public class lista{numero_formatado} " + "{\n")
+        f.write("    public static void main(String[] args) {\n")
+        f.write("        // Escreva seu código aqui\n")
+        f.write("    }\n")
+        f.write("}\n")
+
+print("Arquivos Java criados com sucesso!")
