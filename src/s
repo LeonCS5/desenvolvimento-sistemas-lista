@@ -1,0 +1,200 @@
+import os
+
+# 1. Estrutura de Dados (Data-Driven)
+# Separamos a lógica do template. Cada item é uma tupla: (Enunciado, Código do Miolo)
+exercicios = [
+    ("Leia um número inteiro e o imprima.", 
+     'System.out.print("Digite um inteiro: ");\nint n = sc.nextInt();\nSystem.out.println("Resultado: " + n);'),
+    
+    ("Leia um número real e o imprima.", 
+     'System.out.print("Digite um real: ");\ndouble n = sc.nextDouble();\nSystem.out.println("Resultado: " + n);'),
+    
+    ("Peça ao usuário para digitar três valores inteiros e imprima a soma deles.", 
+     'System.out.print("Digite 3 inteiros: ");\nint a = sc.nextInt(), b = sc.nextInt(), c = sc.nextInt();\nSystem.out.println("Soma: " + (a + b + c));'),
+    
+    ("Leia um número real e imprima o resultado do quadrado desse número.", 
+     'System.out.print("Digite um numero: ");\ndouble n = sc.nextDouble();\nSystem.out.println("Quadrado: " + (n * n));'),
+    
+    ("Leia um número real e imprima a quinta parte desse número.", 
+     'System.out.print("Digite um numero: ");\ndouble n = sc.nextDouble();\nSystem.out.println("Quinta parte: " + (n / 5.0));'),
+    
+    ("Leia uma temperatura em graus Celsius e apresente-a convertida em Fahrenheit.", 
+     'System.out.print("Temp Celsius: ");\ndouble c = sc.nextDouble();\nSystem.out.println("Fahrenheit: " + (c * (9.0/5.0) + 32.0));'),
+    
+    ("Leia uma temperatura em graus Fahrenheit e apresente-a convertida em Celsius.", 
+     'System.out.print("Temp Fahrenheit: ");\ndouble f = sc.nextDouble();\nSystem.out.println("Celsius: " + (5.0 * (f - 32.0) / 9.0));'),
+    
+    ("Leia uma temperatura em graus Kelvin e apresente-a convertida em graus Celsius.", 
+     'System.out.print("Temp Kelvin: ");\ndouble k = sc.nextDouble();\nSystem.out.println("Celsius: " + (k - 273.15));'),
+    
+    ("Leia uma temperatura em graus Celsius e apresente-a convertida em graus Kelvin.", 
+     'System.out.print("Temp Celsius: ");\ndouble c = sc.nextDouble();\nSystem.out.println("Kelvin: " + (c + 273.15));'),
+    
+    ("Leia uma velocidade em km/h e apresente-a convertida em m/s.", 
+     'System.out.print("Velocidade (km/h): ");\ndouble k = sc.nextDouble();\nSystem.out.println("m/s: " + (k / 3.6));'),
+    
+    ("Leia uma velocidade em m/s e apresente-a convertida em km/h.", 
+     'System.out.print("Velocidade (m/s): ");\ndouble m = sc.nextDouble();\nSystem.out.println("km/h: " + (m * 3.6));'),
+    
+    ("Leia uma distância em milhas e apresente-a convertida em quilômetros.", 
+     'System.out.print("Milhas: ");\ndouble m = sc.nextDouble();\nSystem.out.println("Km: " + (1.61 * m));'),
+    
+    ("Leia uma distância em quilômetros e apresente-a convertida em milhas.", 
+     'System.out.print("Quilometros: ");\ndouble k = sc.nextDouble();\nSystem.out.println("Milhas: " + (k / 1.61));'),
+    
+    ("Leia um ângulo em graus e apresente-o convertido em radianos.", 
+     'System.out.print("Graus: ");\ndouble g = sc.nextDouble();\nSystem.out.println("Radianos: " + (g * 3.14 / 180.0));'),
+    
+    ("Leia um ângulo em radianos e apresente-o convertido em graus.", 
+     'System.out.print("Radianos: ");\ndouble r = sc.nextDouble();\nSystem.out.println("Graus: " + (r * 180.0 / 3.14));'),
+    
+    ("Leia um valor de comprimento em polegadas e apresente-o convertido em centímetros.", 
+     'System.out.print("Polegadas: ");\ndouble p = sc.nextDouble();\nSystem.out.println("Centimetros: " + (p * 2.54));'),
+    
+    ("Leia um valor de comprimento em centímetros e apresente-o convertido em polegadas.", 
+     'System.out.print("Centimetros: ");\ndouble c = sc.nextDouble();\nSystem.out.println("Polegadas: " + (c / 2.54));'),
+    
+    ("Leia um volume em metros cúbicos (m3) e converta para litros.", 
+     'System.out.print("Metros cubicos: ");\ndouble m = sc.nextDouble();\nSystem.out.println("Litros: " + (1000 * m));'),
+    
+    ("Leia um volume em litros e converta para metros cúbicos.", 
+     'System.out.print("Litros: ");\ndouble l = sc.nextDouble();\nSystem.out.println("Metros cubicos: " + (l / 1000.0));'),
+    
+    ("Leia uma massa em quilogramas e converta para libras.", 
+     'System.out.print("Kg: ");\ndouble k = sc.nextDouble();\nSystem.out.println("Libras: " + (k / 0.45));'),
+    
+    ("Leia uma massa em libras e converta para quilogramas.", 
+     'System.out.print("Libras: ");\ndouble l = sc.nextDouble();\nSystem.out.println("Kg: " + (l * 0.45));'),
+    
+    ("Leia um comprimento em jardas e converta para metros.", 
+     'System.out.print("Jardas: ");\ndouble j = sc.nextDouble();\nSystem.out.println("Metros: " + (0.91 * j));'),
+    
+    ("Leia um comprimento em metros e converta para jardas.", 
+     'System.out.print("Metros: ");\ndouble m = sc.nextDouble();\nSystem.out.println("Jardas: " + (m / 0.91));'),
+    
+    ("Leia uma área em metros quadrados e converta para acres.", 
+     'System.out.print("Metros quadrados: ");\ndouble m = sc.nextDouble();\nSystem.out.println("Acres: " + (m * 0.000247));'),
+    
+    ("Leia uma área em acres e converta para metros quadrados.", 
+     'System.out.print("Acres: ");\ndouble a = sc.nextDouble();\nSystem.out.println("Metros quadrados: " + (a * 4048.58));'),
+    
+    ("Leia uma área em metros quadrados e converta para hectares.", 
+     'System.out.print("Metros quadrados: ");\ndouble m = sc.nextDouble();\nSystem.out.println("Hectares: " + (m * 0.0001));'),
+    
+    ("Leia uma área em hectares e converta para metros quadrados.", 
+     'System.out.print("Hectares: ");\ndouble h = sc.nextDouble();\nSystem.out.println("Metros quadrados: " + (h * 10000));'),
+    
+    ("Leia três valores e apresente a soma dos quadrados deles.", 
+     'System.out.print("Digite 3 valores: ");\ndouble a = sc.nextDouble(), b = sc.nextDouble(), c = sc.nextDouble();\nSystem.out.println("Soma dos quadrados: " + ((a*a)+(b*b)+(c*c)));'),
+    
+    ("Leia quatro notas, calcule a média aritmética e imprima o resultado.", 
+     'System.out.print("Digite as 4 notas: ");\ndouble n1 = sc.nextDouble(), n2 = sc.nextDouble(), n3 = sc.nextDouble(), n4 = sc.nextDouble();\nSystem.out.println("Media: " + ((n1+n2+n3+n4)/4));'),
+    
+    ("Leia um valor em reais e a cotação do dólar. Imprima o valor em dólares.", 
+     'System.out.print("Reais e Cotacao: ");\ndouble reais = sc.nextDouble(), cotacao = sc.nextDouble();\nSystem.out.println("Dolares: " + (reais / cotacao));'),
+    
+    ("Leia um número inteiro e imprima seu antecessor e sucessor.", 
+     'System.out.print("Digite um inteiro: ");\nint n = sc.nextInt();\nSystem.out.println("Antecessor: " + (n-1) + " | Sucessor: " + (n+1));'),
+    
+    ("Leia um número inteiro e imprima a soma do sucessor do triplo com o antecessor do dobro.", 
+     'System.out.print("Digite um inteiro: ");\nint n = sc.nextInt();\nint sucTriplo = (n * 3) + 1;\nint antDobro = (n * 2) - 1;\nSystem.out.println("Resultado: " + (sucTriplo + antDobro));'),
+    
+    ("Leia o lado de um quadrado e calcule sua área.", 
+     'System.out.print("Lado do quadrado: ");\ndouble lado = sc.nextDouble();\nSystem.out.println("Area: " + (lado * lado));'),
+    
+    ("Leia o raio de um círculo e calcule sua área.", 
+     'System.out.print("Raio: ");\ndouble r = sc.nextDouble();\nSystem.out.println("Area: " + (3.141592 * r * r));'),
+    
+    ("Leia os catetos (a e b) de um triângulo e calcule a hipotenusa.", 
+     'System.out.print("Catetos a e b: ");\ndouble a = sc.nextDouble(), b = sc.nextDouble();\nSystem.out.println("Hipotenusa: " + Math.sqrt((a*a)+(b*b)));'),
+    
+    ("Leia altura e raio de um cilindro e calcule seu volume.", 
+     'System.out.print("Altura e Raio: ");\ndouble h = sc.nextDouble(), r = sc.nextDouble();\nSystem.out.println("Volume: " + (3.141592 * r * r * h));'),
+    
+    ("Leia o valor de um produto e aplique 12% de desconto.", 
+     'System.out.print("Valor do produto: ");\ndouble v = sc.nextDouble();\nSystem.out.println("Com desconto: " + (v * 0.88));'),
+    
+    ("Leia o salário e calcule o novo salário com aumento de 25%.", 
+     'System.out.print("Salario: ");\ndouble s = sc.nextDouble();\nSystem.out.println("Novo salario: " + (s * 1.25));'),
+    
+    ("Divida R$ 780.000,00 entre três ganhadores (46%, 32%, restante).", 
+     'double premio = 780000;\nSystem.out.println("1o: " + (premio*0.46) + "\\n2o: " + (premio*0.32) + "\\n3o: " + (premio*0.22));'),
+    
+    ("Um encanador recebe R$ 30,00/dia. Calcule o salário líquido com desconto de 8%.", 
+     'System.out.print("Dias trabalhados: ");\nint dias = sc.nextInt();\nSystem.out.println("Liquido: " + (dias * 30 * 0.92));'),
+    
+    ("Leia valor da hora e horas trabalhadas. Adicione 10% ao salário final.", 
+     'System.out.print("Valor hora e Horas trab: ");\ndouble vh = sc.nextDouble(), ht = sc.nextDouble();\nSystem.out.println("Salario com 10%: " + ((vh * ht) * 1.10));'),
+    
+    ("Leia o salário-base. Gratificação: +5%. Imposto: -7%.", 
+     'System.out.print("Salario base: ");\ndouble sb = sc.nextDouble();\nSystem.out.println("Receber: " + (sb + (sb*0.05) - (sb*0.07)));'),
+    
+    ("Vendas com desconto, parcelamento e comissão.", 
+     'System.out.print("Valor da venda: ");\ndouble v = sc.nextDouble();\nSystem.out.println("A vista: " + (v*0.9) + "\\nParc(3x): " + (v/3) + "\\nComis. vista: " + ((v*0.9)*0.05) + "\\nComis. parc: " + (v*0.05));'),
+    
+    ("Calcule quantos degraus são necessários para atingir uma altura desejada.", 
+     'System.out.print("Altura do degrau e Altura desejada: ");\ndouble degrau = sc.nextDouble(), altura = sc.nextDouble();\nSystem.out.println("Degraus necessarios: " + Math.ceil(altura / degrau));'),
+    
+    ("Converta uma letra maiúscula para minúscula usando ASCII.", 
+     'System.out.print("Letra maiuscula: ");\nchar l = sc.next().charAt(0);\nSystem.out.println("Minuscula: " + (char)(l + 32));'),
+    
+    ("Leia um número de 3 dígitos e imprima-o invertido.", 
+     'System.out.print("Num de 3 digitos: ");\nint n = sc.nextInt();\nSystem.out.println("Invertido: " + ((n%10)*100 + ((n/10)%10)*10 + (n/100)));'),
+    
+    ("Leia um número de 4 dígitos e imprima um dígito por linha.", 
+     'System.out.print("Num de 4 digitos: ");\nString n = sc.next();\nSystem.out.println(n.charAt(0)+"\\n"+n.charAt(1)+"\\n"+n.charAt(2)+"\\n"+n.charAt(3));'),
+    
+    ("Converta segundos em horas, minutos e segundos.", 
+     'System.out.print("Segundos totais: ");\nint s = sc.nextInt();\nSystem.out.println((s/3600) + "h " + ((s%3600)/60) + "m " + (s%60) + "s");'),
+    
+    ("Calcule o horário final de um experimento.", 
+     'System.out.print("H, M, S atuais e Duracao(S): ");\nint h = sc.nextInt(), m = sc.nextInt(), s = sc.nextInt(), d = sc.nextInt();\nint ts = h*3600 + m*60 + s + d;\nSystem.out.println(((ts/3600)%24) + "h " + ((ts%3600)/60) + "m " + (ts%60) + "s");'),
+    
+    ("Calcule o ano de nascimento com base na idade e no ano atual.", 
+     'System.out.print("Idade e Ano Atual: ");\nint i = sc.nextInt(), a = sc.nextInt();\nSystem.out.println("Nascimento: " + (a - i));'),
+    
+    ("Leia coordenadas (x, y) e calcule a distância até (0, 0).", 
+     'System.out.print("Coordenadas X e Y: ");\ndouble x = sc.nextDouble(), y = sc.nextDouble();\nSystem.out.println("Distancia ate 0,0: " + Math.sqrt((x*x)+(y*y)));'),
+    
+    ("Divida um prêmio proporcionalmente ao valor apostado por três amigos.", 
+     'System.out.print("Apostas dos 3 amigos e Premio: ");\ndouble a1 = sc.nextDouble(), a2 = sc.nextDouble(), a3 = sc.nextDouble(), p = sc.nextDouble();\ndouble tot = a1+a2+a3;\nSystem.out.println("A1: " + (p*(a1/tot)) + " | A2: " + (p*(a2/tot)) + " | A3: " + (p*(a3/tot)));'),
+    
+    ("Calcule o custo para cercar um terreno.", 
+     'System.out.print("Comp, Largura e Preco do metro: ");\ndouble c = sc.nextDouble(), l = sc.nextDouble(), p = sc.nextDouble();\nSystem.out.println("Custo total: " + (2 * (c + l) * p));')
+]
+
+# 2. Template Limpo e Genérico
+# Observe que formatamos a string em Python para garantir que a indentação do Java gerado seja perfeita
+def gerar_codigo_java(id_ex, enunciado, logica):
+    # Conserta a indentação para encaixar perfeitamente dentro da função main
+    logica_indentada = "\\n        ".join(logica.strip().split('\\n'))
+    
+    return f"""import java.util.Scanner;
+
+public class Exercicio{id_ex:02d} {{
+    public static void main(String[] args) {{
+        // {enunciado}
+        Scanner sc = new Scanner(System.in);
+        
+        {logica_indentada}
+        
+        sc.close();
+    }}
+}}
+"""
+
+# 3. Execução
+pasta = "JavaLista53"
+if not os.path.exists(pasta):
+    os.makedirs(pasta)
+
+# O laço agora só lida com a criação dos arquivos, sem lógicas engessadas dentro dele.
+for indice, (enunciado, logica) in enumerate(exercicios):
+    numero = indice + 1
+    codigo_pronto = gerar_codigo_java(numero, enunciado, logica)
+    
+    caminho = os.path.join(pasta, f"Exercicio{numero:02d}.java")
+    with open(caminho, "w", encoding="utf-8") as f:
+        f.write(codigo_pronto)
+
+print("🏆 Sucesso absoluto! Os 53 arquivos Java foram criados com padrão Sênior!")
