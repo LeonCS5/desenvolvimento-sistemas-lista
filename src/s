@@ -184,7 +184,7 @@ public class Exercicio{id_ex:02d} {{
 """
 
 # 3. Execução
-pasta = "JavaLista53"
+pasta = "src"
 if not os.path.exists(pasta):
     os.makedirs(pasta)
 
