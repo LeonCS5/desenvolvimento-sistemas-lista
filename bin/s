@@ -1,75 +1,176 @@
-# Lista de exercícios
 exercicios = [
 "Faça um programa que leia um número inteiro e o imprima.",
 "Faça um programa que leia um número real e o imprima.",
 "Peça ao usuário para digitar três valores inteiros e imprima a soma deles.",
 "Leia um número real e imprima o resultado do quadrado desse número.",
 "Leia um número real e imprima a quinta parte desse número.",
-"Leia uma temperatura em graus Celsius e apresente-a convertida em graus Fahrenheit. Fórmula: F = C × (9.0/5.0) + 32.0",
-"Leia uma temperatura em graus Fahrenheit e apresente-a convertida em graus Celsius. Fórmula: C = 5.0 × (F − 32.0) / 9.0",
-"Leia uma temperatura em graus Kelvin e apresente-a convertida em graus Celsius. Fórmula: C = K − 273.15",
-"Leia uma temperatura em graus Celsius e apresente-a convertida em graus Kelvin. Fórmula: K = C + 273.15",
-"Leia uma velocidade em km/h e apresente-a convertida em m/s. Fórmula: M = K / 3.6",
-"Leia uma velocidade em m/s e apresente-a convertida em km/h. Fórmula: K = M × 3.6",
-"Leia uma distância em milhas e apresente-a convertida em quilômetros. Fórmula: K = 1.61 × M",
-"Leia uma distância em quilômetros e apresente-a convertida em milhas. Fórmula: M = K / 1.61",
-"Leia um ângulo em graus e apresente-o convertido em radianos. Fórmula: R = G × π / 180 (π = 3.14)",
-"Leia um ângulo em radianos e apresente-o convertido em graus. Fórmula: G = R × 180 / π (π = 3.14)",
-"Leia um valor de comprimento em polegadas e apresente-o convertido em centímetros. Fórmula: C = P × 2.54",
-"Leia um valor de comprimento em centímetros e apresente-o convertido em polegadas. Fórmula: P = C / 2.54",
-"Leia um volume em metros cúbicos (m³) e converta para litros. Fórmula: L = 1000 × M",
-"Leia um volume em litros e converta para metros cúbicos. Fórmula: M = L / 1000",
-"Leia uma massa em quilogramas e converta para libras. Fórmula: L = K / 0.45",
-"Leia uma massa em libras e converta para quilogramas. Fórmula: K = L × 0.45",
-"Leia um comprimento em jardas e converta para metros. Fórmula: M = 0.91 × J",
-"Leia um comprimento em metros e converta para jardas. Fórmula: J = M / 0.91",
-"Leia uma área em metros quadrados e converta para acres. Fórmula: A = M × 0.000247",
-"Leia uma área em acres e converta para metros quadrados. Fórmula: M = A × 4048.58",
-"Leia uma área em metros quadrados e converta para hectares. Fórmula: H = M × 0.0001",
-"Leia uma área em hectares e converta para metros quadrados. Fórmula: M = H × 10000",
+"Leia uma temperatura em graus Celsius e apresente-a convertida em graus Fahrenheit.",
+"Leia uma temperatura em graus Fahrenheit e apresente-a convertida em graus Celsius.",
+"Leia uma temperatura em graus Kelvin e apresente-a convertida em graus Celsius.",
+"Leia uma temperatura em graus Celsius e apresente-a convertida em graus Kelvin.",
+"Leia uma velocidade em km/h e apresente-a convertida em m/s.",
+"Leia uma velocidade em m/s e apresente-a convertida em km/h.",
+"Leia uma distância em milhas e apresente-a convertida em quilômetros.",
+"Leia uma distância em quilômetros e apresente-a convertida em milhas.",
+"Leia um ângulo em graus e apresente-o convertido em radianos.",
+"Leia um ângulo em radianos e apresente-o convertido em graus.",
+"Leia um valor de comprimento em polegadas e apresente-o convertido em centímetros.",
+"Leia um valor de comprimento em centímetros e apresente-o convertido em polegadas.",
+"Leia um volume em metros cúbicos e converta para litros.",
+"Leia um volume em litros e converta para metros cúbicos.",
+"Leia uma massa em quilogramas e converta para libras.",
+"Leia uma massa em libras e converta para quilogramas.",
+"Leia um comprimento em jardas e converta para metros.",
+"Leia um comprimento em metros e converta para jardas.",
+"Leia uma área em metros quadrados e converta para acres.",
+"Leia uma área em acres e converta para metros quadrados.",
+"Leia uma área em metros quadrados e converta para hectares.",
+"Leia uma área em hectares e converta para metros quadrados.",
 "Leia três valores e apresente a soma dos quadrados deles.",
 "Leia quatro notas, calcule a média aritmética e imprima o resultado.",
 "Leia um valor em reais e a cotação do dólar. Imprima o valor em dólares.",
 "Leia um número inteiro e imprima seu antecessor e sucessor.",
 "Leia um número inteiro e imprima a soma do sucessor do triplo com o antecessor do dobro.",
 "Leia o lado de um quadrado e calcule sua área.",
-"Leia o raio de um círculo e calcule sua área. Fórmula: A = π × r² (π = 3.141592)",
-"Leia os catetos (a e b) de um triângulo e calcule a hipotenusa. Fórmula: h = √(a² + b²)",
-"Leia altura e raio de um cilindro e calcule seu volume. Fórmula: V = π × r² × h",
+"Leia o raio de um círculo e calcule sua área.",
+"Leia os catetos de um triângulo e calcule a hipotenusa.",
+"Leia altura e raio de um cilindro e calcule seu volume.",
 "Leia o valor de um produto e aplique 12% de desconto.",
 "Leia o salário e calcule o novo salário com aumento de 25%.",
-"Divida R$ 780.000,00 entre três ganhadores: 1º: 46%, 2º: 32%, 3º: restante",
-"Um encanador recebe R$ 30,00/dia. Calcule o salário líquido com desconto de 8%.",
-"Leia valor da hora e horas trabalhadas. Adicione 10% ao salário final.",
-"Leia o salário-base. Gratificação: +5%, Imposto: −7%",
-"Para vendas: À vista: 10% de desconto, Parcelado (3x): sem juros, Comissão à vista: 5% sobre valor com desconto, Comissão parcelada: 5% sobre valor total",
-"Calcule quantos degraus são necessários para atingir uma altura desejada.",
+"Divida R$ 780000 entre três ganhadores.",
+"Um encanador recebe R$ 30 por dia. Calcule o salário líquido com desconto de 8%.",
+"Leia valor da hora e horas trabalhadas. Adicione 10%.",
+"Leia o salário-base. Gratificação +5% e imposto -7%.",
+"Sistema de vendas com desconto, parcelamento e comissão.",
+"Calcule quantos degraus são necessários para atingir uma altura.",
 "Converta uma letra maiúscula para minúscula usando ASCII.",
 "Leia um número de 3 dígitos e imprima-o invertido.",
 "Leia um número de 4 dígitos e imprima um dígito por linha.",
 "Converta segundos em horas, minutos e segundos.",
-"Calcule o horário final de um experimento (hora inicial + duração em segundos).",
-"Calcule o ano de nascimento com base na idade e no ano atual.",
-"Leia coordenadas (x, y) e calcule a distância até (0, 0). Fórmula: d = √(x² + y²)",
-"Divida um prêmio proporcionalmente ao valor apostado por três amigos.",
-"Calcule o custo para cercar um terreno: custo = 2 × (c + l) × p"
+"Calcule o horário final de um experimento.",
+"Divida um prêmio proporcionalmente entre três pessoas."
 ]
 
-# Criando arquivos
-for i, exercicio in enumerate(exercicios, start=1):
-    romano = para_romano(i)
-    numero_formatado = f"{i:02d}"
-    
-    nome_arquivo = f"lista{numero_formatado}.java"
-    
-    with open(nome_arquivo, "w", encoding="utf-8") as f:
-        f.write(f"// Exercício {numero_formatado} ({romano})\n")
-        f.write(f"// {exercicio}\n\n")
-        
-        f.write(f"public class lista{numero_formatado} " + "{\n")
-        f.write("    public static void main(String[] args) {\n")
-        f.write("        // Escreva seu código aqui\n")
-        f.write("    }\n")
-        f.write("}\n")
+def gerar_codigo(i, enunciado):
+    c = ""
+    c += f"// Exercício {i:02d}\n"
+    c += f"// {enunciado}\n\n"
+    c += "import java.util.Scanner;\n\n"
+    c += f"public class lista{i:02d} " + "{\n"
+    c += "    public static void main(String[] args) {\n"
+    c += "        Scanner sc = new Scanner(System.in);\n\n"
 
-print("Arquivos Java criados com sucesso!")
+    # ===== TODOS OS EXERCÍCIOS =====
+
+    if i == 1:
+        c += 'int n=sc.nextInt(); System.out.println(n);\n'
+    elif i == 2:
+        c += 'double n=sc.nextDouble(); System.out.println(n);\n'
+    elif i == 3:
+        c += 'int a=sc.nextInt(),b=sc.nextInt(),d=sc.nextInt(); System.out.println(a+b+d);\n'
+    elif i == 4:
+        c += 'double n=sc.nextDouble(); System.out.println(n*n);\n'
+    elif i == 5:
+        c += 'double n=sc.nextDouble(); System.out.println(n/5);\n'
+    elif i == 6:
+        c += 'double c1=sc.nextDouble(); System.out.println(c1*(9.0/5.0)+32);\n'
+    elif i == 7:
+        c += 'double f=sc.nextDouble(); System.out.println(5.0*(f-32)/9.0);\n'
+    elif i == 8:
+        c += 'double k=sc.nextDouble(); System.out.println(k-273.15);\n'
+    elif i == 9:
+        c += 'double c1=sc.nextDouble(); System.out.println(c1+273.15);\n'
+    elif i == 10:
+        c += 'double k=sc.nextDouble(); System.out.println(k/3.6);\n'
+    elif i == 11:
+        c += 'double m=sc.nextDouble(); System.out.println(m*3.6);\n'
+    elif i == 12:
+        c += 'double m=sc.nextDouble(); System.out.println(1.61*m);\n'
+    elif i == 13:
+        c += 'double k=sc.nextDouble(); System.out.println(k/1.61);\n'
+    elif i == 14:
+        c += 'double g=sc.nextDouble(); System.out.println(g*3.14/180);\n'
+    elif i == 15:
+        c += 'double r=sc.nextDouble(); System.out.println(r*180/3.14);\n'
+    elif i == 16:
+        c += 'double p=sc.nextDouble(); System.out.println(p*2.54);\n'
+    elif i == 17:
+        c += 'double cm=sc.nextDouble(); System.out.println(cm/2.54);\n'
+    elif i == 18:
+        c += 'double m=sc.nextDouble(); System.out.println(m*1000);\n'
+    elif i == 19:
+        c += 'double l=sc.nextDouble(); System.out.println(l/1000);\n'
+    elif i == 20:
+        c += 'double k=sc.nextDouble(); System.out.println(k/0.45);\n'
+    elif i == 21:
+        c += 'double l=sc.nextDouble(); System.out.println(l*0.45);\n'
+    elif i == 22:
+        c += 'double j=sc.nextDouble(); System.out.println(0.91*j);\n'
+    elif i == 23:
+        c += 'double m=sc.nextDouble(); System.out.println(m/0.91);\n'
+    elif i == 24:
+        c += 'double m=sc.nextDouble(); System.out.println(m*0.000247);\n'
+    elif i == 25:
+        c += 'double a=sc.nextDouble(); System.out.println(a*4048.58);\n'
+    elif i == 26:
+        c += 'double m=sc.nextDouble(); System.out.println(m*0.0001);\n'
+    elif i == 27:
+        c += 'double h=sc.nextDouble(); System.out.println(h*10000);\n'
+    elif i == 28:
+        c += 'double a=sc.nextDouble(),b=sc.nextDouble(),d=sc.nextDouble(); System.out.println(a*a+b*b+d*d);\n'
+    elif i == 29:
+        c += 'double n1=sc.nextDouble(),n2=sc.nextDouble(),n3=sc.nextDouble(),n4=sc.nextDouble(); System.out.println((n1+n2+n3+n4)/4);\n'
+    elif i == 30:
+        c += 'double r=sc.nextDouble(),c1=sc.nextDouble(); System.out.println(r/c1);\n'
+    elif i == 31:
+        c += 'int n=sc.nextInt(); System.out.println(n-1); System.out.println(n+1);\n'
+    elif i == 32:
+        c += 'int n=sc.nextInt(); System.out.println((n*3+1)+(n*2-1));\n'
+    elif i == 33:
+        c += 'double l=sc.nextDouble(); System.out.println(l*l);\n'
+    elif i == 34:
+        c += 'double r=sc.nextDouble(); System.out.println(3.141592*r*r);\n'
+    elif i == 35:
+        c += 'double a=sc.nextDouble(),b=sc.nextDouble(); System.out.println(Math.sqrt(a*a+b*b));\n'
+    elif i == 36:
+        c += 'double r=sc.nextDouble(),h=sc.nextDouble(); System.out.println(3.141592*r*r*h);\n'
+    elif i == 37:
+        c += 'double v=sc.nextDouble(); System.out.println(v*0.88);\n'
+    elif i == 38:
+        c += 'double s=sc.nextDouble(); System.out.println(s*1.25);\n'
+    elif i == 39:
+        c += 'double t=780000; System.out.println(t*0.46); System.out.println(t*0.32); System.out.println(t*0.22);\n'
+    elif i == 40:
+        c += 'int d=sc.nextInt(); double s=d*30; System.out.println(s*0.92);\n'
+    elif i == 41:
+        c += 'double vh=sc.nextDouble(),h=sc.nextDouble(); System.out.println(vh*h*1.10);\n'
+    elif i == 42:
+        c += 'double s=sc.nextDouble(); System.out.println(s*1.05*0.93);\n'
+    elif i == 43:
+        c += 'double v=sc.nextDouble(); double vista=v*0.9; System.out.println(vista); System.out.println(v/3); System.out.println(vista*0.05); System.out.println(v*0.05);\n'
+    elif i == 44:
+        c += 'double alt=sc.nextDouble(),d=sc.nextDouble(); System.out.println((int)(alt/d));\n'
+    elif i == 45:
+        c += 'char ch=sc.next().charAt(0); System.out.println((char)(ch+32));\n'
+    elif i == 46:
+        c += 'int n=sc.nextInt(); int a=n/100,b=(n/10)%10,d=n%10; System.out.println(d*100+b*10+a);\n'
+    elif i == 47:
+        c += 'int n=sc.nextInt(); System.out.println(n/1000); System.out.println((n/100)%10); System.out.println((n/10)%10); System.out.println(n%10);\n'
+    elif i == 48:
+        c += 'int s=sc.nextInt(); int h=s/3600,m=(s%3600)/60,seg=s%60; System.out.println(h+":"+m+":"+seg);\n'
+    elif i == 49:
+        c += 'int h=sc.nextInt(),m=sc.nextInt(),s=sc.nextInt(),d=sc.nextInt(); int total=h*3600+m*60+s+d; System.out.println((total/3600)%24+":"+(total%3600)/60+":"+total%60);\n'
+    elif i == 50:
+        c += 'double a=sc.nextDouble(),b=sc.nextDouble(),d=sc.nextDouble(),p=sc.nextDouble(); double soma=a+b+d; System.out.println(a/soma*p); System.out.println(b/soma*p); System.out.println(d/soma*p);\n'
+
+    c += "\n        sc.close();\n"
+    c += "    }\n"
+    c += "}\n"
+    return c
+
+
+for i in range(1, 51):
+    with open(f"lista{i:02d}.java", "w", encoding="utf-8") as f:
+        f.write(gerar_codigo(i, exercicios[i-1]))
+
+print("✅ 50 arquivos Java com enunciado e resolução criados!")
