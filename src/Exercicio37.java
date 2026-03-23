@@ -6,8 +6,8 @@ public class Exercicio37 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Valor do produto: ");
-double v = sc.nextDouble();
-System.out.println("Com desconto: " + (v * 0.88));
+        double v = sc.nextDouble();
+        System.out.println("Com desconto: " + (v * 0.88));
         
         sc.close();
     }

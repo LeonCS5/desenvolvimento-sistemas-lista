@@ -6,8 +6,8 @@ public class Exercicio31 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Digite um inteiro: ");
-int n = sc.nextInt();
-System.out.println("Antecessor: " + (n-1) + " | Sucessor: " + (n+1));
+        int n = sc.nextInt();
+        System.out.println("Antecessor: " + (n-1) + " | Sucessor: " + (n+1));
         
         sc.close();
     }

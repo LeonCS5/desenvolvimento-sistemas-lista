@@ -6,8 +6,8 @@ public class Exercicio27 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Hectares: ");
-double h = sc.nextDouble();
-System.out.println("Metros quadrados: " + (h * 10000));
+        double h = sc.nextDouble();
+        System.out.println("Metros quadrados: " + (h * 10000));
         
         sc.close();
     }

@@ -6,8 +6,8 @@ public class Exercicio19 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Litros: ");
-double l = sc.nextDouble();
-System.out.println("Metros cubicos: " + (l / 1000.0));
+        double l = sc.nextDouble();
+        System.out.println("Metros cubicos: " + (l / 1000.0));
         
         sc.close();
     }

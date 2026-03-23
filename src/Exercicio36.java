@@ -6,8 +6,8 @@ public class Exercicio36 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Altura e Raio: ");
-double h = sc.nextDouble(), r = sc.nextDouble();
-System.out.println("Volume: " + (3.141592 * r * r * h));
+        double h = sc.nextDouble(), r = sc.nextDouble();
+        System.out.println("Volume: " + (3.141592 * r * r * h));
         
         sc.close();
     }

@@ -6,8 +6,8 @@ public class Exercicio35 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Catetos a e b: ");
-double a = sc.nextDouble(), b = sc.nextDouble();
-System.out.println("Hipotenusa: " + Math.sqrt((a*a)+(b*b)));
+        double a = sc.nextDouble(), b = sc.nextDouble();
+        System.out.println("Hipotenusa: " + Math.sqrt((a*a)+(b*b)));
         
         sc.close();
     }

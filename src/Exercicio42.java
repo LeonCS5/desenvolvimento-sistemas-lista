@@ -6,8 +6,8 @@ public class Exercicio42 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Salario base: ");
-double sb = sc.nextDouble();
-System.out.println("Receber: " + (sb + (sb*0.05) - (sb*0.07)));
+        double sb = sc.nextDouble();
+        System.out.println("Receber: " + (sb + (sb*0.05) - (sb*0.07)));
         
         sc.close();
     }

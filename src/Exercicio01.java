@@ -6,8 +6,8 @@ public class Exercicio01 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Digite um inteiro: ");
-int n = sc.nextInt();
-System.out.println("Resultado: " + n);
+        int n = sc.nextInt();
+        System.out.println("Resultado: " + n);
         
         sc.close();
     }

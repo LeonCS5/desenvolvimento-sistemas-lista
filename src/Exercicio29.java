@@ -6,8 +6,8 @@ public class Exercicio29 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Digite as 4 notas: ");
-double n1 = sc.nextDouble(), n2 = sc.nextDouble(), n3 = sc.nextDouble(), n4 = sc.nextDouble();
-System.out.println("Media: " + ((n1+n2+n3+n4)/4));
+        double n1 = sc.nextDouble(), n2 = sc.nextDouble(), n3 = sc.nextDouble(), n4 = sc.nextDouble();
+        System.out.println("Media: " + ((n1+n2+n3+n4)/4));
         
         sc.close();
     }

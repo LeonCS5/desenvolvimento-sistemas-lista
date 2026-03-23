@@ -6,8 +6,8 @@ public class Exercicio02 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Digite um real: ");
-double n = sc.nextDouble();
-System.out.println("Resultado: " + n);
+        double n = sc.nextDouble();
+        System.out.println("Resultado: " + n);
         
         sc.close();
     }

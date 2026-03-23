@@ -6,7 +6,7 @@ public class Exercicio39 {
         Scanner sc = new Scanner(System.in);
         
         double premio = 780000;
-System.out.println("1o: " + (premio*0.46) + "\n        2o: " + (premio*0.32) + "\n        3o: " + (premio*0.22));
+        System.out.println("1o: " + (premio*0.46) + "\n        2o: " + (premio*0.32) + "\n        3o: " + (premio*0.22));
         
         sc.close();
     }

@@ -6,8 +6,8 @@ public class Exercicio46 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Num de 3 digitos: ");
-int n = sc.nextInt();
-System.out.println("Invertido: " + ((n%10)*100 + ((n/10)%10)*10 + (n/100)));
+        int n = sc.nextInt();
+        System.out.println("Invertido: " + ((n%10)*100 + ((n/10)%10)*10 + (n/100)));
         
         sc.close();
     }

@@ -6,8 +6,8 @@ public class Exercicio13 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Quilometros: ");
-double k = sc.nextDouble();
-System.out.println("Milhas: " + (k / 1.61));
+        double k = sc.nextDouble();
+        System.out.println("Milhas: " + (k / 1.61));
         
         sc.close();
     }

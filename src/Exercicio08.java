@@ -6,8 +6,8 @@ public class Exercicio08 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Temp Kelvin: ");
-double k = sc.nextDouble();
-System.out.println("Celsius: " + (k - 273.15));
+        double k = sc.nextDouble();
+        System.out.println("Celsius: " + (k - 273.15));
         
         sc.close();
     }

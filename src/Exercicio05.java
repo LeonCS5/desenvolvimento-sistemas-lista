@@ -6,8 +6,8 @@ public class Exercicio05 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Digite um numero: ");
-double n = sc.nextDouble();
-System.out.println("Quinta parte: " + (n / 5.0));
+        double n = sc.nextDouble();
+        System.out.println("Quinta parte: " + (n / 5.0));
         
         sc.close();
     }

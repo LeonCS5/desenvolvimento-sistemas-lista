@@ -6,8 +6,8 @@ public class Exercicio15 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Radianos: ");
-double r = sc.nextDouble();
-System.out.println("Graus: " + (r * 180.0 / 3.14));
+        double r = sc.nextDouble();
+        System.out.println("Graus: " + (r * 180.0 / 3.14));
         
         sc.close();
     }

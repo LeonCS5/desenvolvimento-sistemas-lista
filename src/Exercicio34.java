@@ -6,8 +6,8 @@ public class Exercicio34 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Raio: ");
-double r = sc.nextDouble();
-System.out.println("Area: " + (3.141592 * r * r));
+        double r = sc.nextDouble();
+        System.out.println("Area: " + (3.141592 * r * r));
         
         sc.close();
     }

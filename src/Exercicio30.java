@@ -6,8 +6,8 @@ public class Exercicio30 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Reais e Cotacao: ");
-double reais = sc.nextDouble(), cotacao = sc.nextDouble();
-System.out.println("Dolares: " + (reais / cotacao));
+        double reais = sc.nextDouble(), cotacao = sc.nextDouble();
+        System.out.println("Dolares: " + (reais / cotacao));
         
         sc.close();
     }

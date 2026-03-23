@@ -6,8 +6,8 @@ public class Exercicio04 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Digite um numero: ");
-double n = sc.nextDouble();
-System.out.println("Quadrado: " + (n * n));
+        double n = sc.nextDouble();
+        System.out.println("Quadrado: " + (n * n));
         
         sc.close();
     }

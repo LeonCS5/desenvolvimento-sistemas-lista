@@ -6,8 +6,8 @@ public class Exercicio10 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Velocidade (km/h): ");
-double k = sc.nextDouble();
-System.out.println("m/s: " + (k / 3.6));
+        double k = sc.nextDouble();
+        System.out.println("m/s: " + (k / 3.6));
         
         sc.close();
     }

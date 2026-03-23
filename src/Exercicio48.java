@@ -6,8 +6,8 @@ public class Exercicio48 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Segundos totais: ");
-int s = sc.nextInt();
-System.out.println((s/3600) + "h " + ((s%3600)/60) + "m " + (s%60) + "s");
+        int s = sc.nextInt();
+        System.out.println((s/3600) + "h " + ((s%3600)/60) + "m " + (s%60) + "s");
         
         sc.close();
     }

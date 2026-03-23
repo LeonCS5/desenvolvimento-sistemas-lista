@@ -6,8 +6,8 @@ public class Exercicio23 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Metros: ");
-double m = sc.nextDouble();
-System.out.println("Jardas: " + (m / 0.91));
+        double m = sc.nextDouble();
+        System.out.println("Jardas: " + (m / 0.91));
         
         sc.close();
     }

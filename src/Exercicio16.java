@@ -6,8 +6,8 @@ public class Exercicio16 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Polegadas: ");
-double p = sc.nextDouble();
-System.out.println("Centimetros: " + (p * 2.54));
+        double p = sc.nextDouble();
+        System.out.println("Centimetros: " + (p * 2.54));
         
         sc.close();
     }

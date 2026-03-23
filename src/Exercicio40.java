@@ -6,8 +6,8 @@ public class Exercicio40 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Dias trabalhados: ");
-int dias = sc.nextInt();
-System.out.println("Liquido: " + (dias * 30 * 0.92));
+        int dias = sc.nextInt();
+        System.out.println("Liquido: " + (dias * 30 * 0.92));
         
         sc.close();
     }

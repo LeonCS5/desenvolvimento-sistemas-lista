@@ -6,8 +6,8 @@ public class Exercicio44 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Altura do degrau e Altura desejada: ");
-double degrau = sc.nextDouble(), altura = sc.nextDouble();
-System.out.println("Degraus necessarios: " + Math.ceil(altura / degrau));
+        double degrau = sc.nextDouble(), altura = sc.nextDouble();
+        System.out.println("Degraus necessarios: " + Math.ceil(altura / degrau));
         
         sc.close();
     }

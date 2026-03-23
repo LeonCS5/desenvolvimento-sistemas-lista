@@ -6,8 +6,8 @@ public class Exercicio50 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Idade e Ano Atual: ");
-int i = sc.nextInt(), a = sc.nextInt();
-System.out.println("Nascimento: " + (a - i));
+        int i = sc.nextInt(), a = sc.nextInt();
+        System.out.println("Nascimento: " + (a - i));
         
         sc.close();
     }

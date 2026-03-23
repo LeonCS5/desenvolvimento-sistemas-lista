@@ -6,8 +6,8 @@ public class Exercicio20 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Kg: ");
-double k = sc.nextDouble();
-System.out.println("Libras: " + (k / 0.45));
+        double k = sc.nextDouble();
+        System.out.println("Libras: " + (k / 0.45));
         
         sc.close();
     }

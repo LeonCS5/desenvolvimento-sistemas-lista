@@ -6,8 +6,8 @@ public class Exercicio07 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Temp Fahrenheit: ");
-double f = sc.nextDouble();
-System.out.println("Celsius: " + (5.0 * (f - 32.0) / 9.0));
+        double f = sc.nextDouble();
+        System.out.println("Celsius: " + (5.0 * (f - 32.0) / 9.0));
         
         sc.close();
     }

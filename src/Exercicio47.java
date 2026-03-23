@@ -6,8 +6,8 @@ public class Exercicio47 {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Num de 4 digitos: ");
-String n = sc.next();
-System.out.println(n.charAt(0)+"\n        "+n.charAt(1)+"\n        "+n.charAt(2)+"\n        "+n.charAt(3));
+        String n = sc.next();
+        System.out.println(n.charAt(0)+"\n        "+n.charAt(1)+"\n        "+n.charAt(2)+"\n        "+n.charAt(3));
         
         sc.close();
     }
